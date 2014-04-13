@@ -22,6 +22,10 @@
 		075ED44818FB13E800C961D2 /* CollegeCalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED44718FB13E800C961D2 /* CollegeCalTests.m */; };
 		075ED45718FB183800C961D2 /* CCEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED45618FB183800C961D2 /* CCEvent.m */; };
 		075ED45918FB198000C961D2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075ED45818FB198000C961D2 /* MapKit.framework */; };
+		075ED45D18FB286B00C961D2 /* CCEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED45C18FB286B00C961D2 /* CCEventsTableViewController.m */; };
+		075ED46018FB2B9600C961D2 /* CCNewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED45F18FB2B9600C961D2 /* CCNewEventViewController.m */; };
+		075ED46318FB351D00C961D2 /* CCStartDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46218FB351D00C961D2 /* CCStartDateViewController.m */; };
+		075ED46618FB352500C961D2 /* CCEndDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46518FB352500C961D2 /* CCEndDateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,14 @@
 		075ED45518FB183800C961D2 /* CCEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEvent.h; sourceTree = "<group>"; };
 		075ED45618FB183800C961D2 /* CCEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEvent.m; sourceTree = "<group>"; };
 		075ED45818FB198000C961D2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		075ED45B18FB286B00C961D2 /* CCEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEventsTableViewController.h; sourceTree = "<group>"; };
+		075ED45C18FB286B00C961D2 /* CCEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEventsTableViewController.m; sourceTree = "<group>"; };
+		075ED45E18FB2B9600C961D2 /* CCNewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNewEventViewController.h; sourceTree = "<group>"; };
+		075ED45F18FB2B9600C961D2 /* CCNewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNewEventViewController.m; sourceTree = "<group>"; };
+		075ED46118FB351D00C961D2 /* CCStartDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStartDateViewController.h; sourceTree = "<group>"; };
+		075ED46218FB351D00C961D2 /* CCStartDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCStartDateViewController.m; sourceTree = "<group>"; };
+		075ED46418FB352500C961D2 /* CCEndDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEndDateViewController.h; sourceTree = "<group>"; };
+		075ED46518FB352500C961D2 /* CCEndDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEndDateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +128,10 @@
 		075ED42218FB13E800C961D2 /* CollegeCal */ = {
 			isa = PBXGroup;
 			children = (
-				075ED45118FB166F00C961D2 /* Data Structures */,
 				075ED42B18FB13E800C961D2 /* CCAppDelegate.h */,
 				075ED42C18FB13E800C961D2 /* CCAppDelegate.m */,
+				075ED45A18FB285300C961D2 /* View Controllers */,
+				075ED45118FB166F00C961D2 /* Data Structures */,
 				075ED42E18FB13E800C961D2 /* Main.storyboard */,
 				075ED43418FB13E800C961D2 /* Images.xcassets */,
 				075ED42318FB13E800C961D2 /* Supporting Files */,
@@ -162,6 +175,21 @@
 				075ED45618FB183800C961D2 /* CCEvent.m */,
 			);
 			name = "Data Structures";
+			sourceTree = "<group>";
+		};
+		075ED45A18FB285300C961D2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				075ED45B18FB286B00C961D2 /* CCEventsTableViewController.h */,
+				075ED45C18FB286B00C961D2 /* CCEventsTableViewController.m */,
+				075ED45E18FB2B9600C961D2 /* CCNewEventViewController.h */,
+				075ED45F18FB2B9600C961D2 /* CCNewEventViewController.m */,
+				075ED46118FB351D00C961D2 /* CCStartDateViewController.h */,
+				075ED46218FB351D00C961D2 /* CCStartDateViewController.m */,
+				075ED46418FB352500C961D2 /* CCEndDateViewController.h */,
+				075ED46518FB352500C961D2 /* CCEndDateViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +302,11 @@
 			files = (
 				075ED45718FB183800C961D2 /* CCEvent.m in Sources */,
 				075ED42D18FB13E800C961D2 /* CCAppDelegate.m in Sources */,
+				075ED46018FB2B9600C961D2 /* CCNewEventViewController.m in Sources */,
+				075ED45D18FB286B00C961D2 /* CCEventsTableViewController.m in Sources */,
 				075ED42918FB13E800C961D2 /* main.m in Sources */,
+				075ED46618FB352500C961D2 /* CCEndDateViewController.m in Sources */,
+				075ED46318FB351D00C961D2 /* CCStartDateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

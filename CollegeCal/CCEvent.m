@@ -27,12 +27,51 @@
 @synthesize completed = _completed;
 @synthesize eventReminder = _eventReminder;
 @synthesize locationManager = _locationManager;
+@synthesize index = _index;
 
 #pragma Public Class Methods
 
 + (CCEvent *)eventWithStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate useCurrentLocation:(BOOL)uselocation {
     
     return [[CCEvent alloc] initWithStartDate:startDate andEndDate:endDate useCurrentLocation:uselocation];
+    
+}
+
++ (void)saveEvent:(CCEvent *)event {
+    
+    if (![CCEvent savedEvents]) {
+        
+        NSData *eventData = [NSKeyedArchiver archivedDataWithRootObject:event];
+        NSMutableArray *newArray = [NSMutableArray arrayWithObject:eventData];
+        [[NSUserDefaults standardUserDefaults] setObject:newArray forKey:@"EventsKey"];
+        
+        
+    } else {
+        
+        NSData *eventData = [NSKeyedArchiver archivedDataWithRootObject:event];
+        NSMutableArray *newArray = [NSMutableArray arrayWithObject:eventData];
+        [newArray addObjectsFromArray:[CCEvent savedEvents]];
+        [[NSUserDefaults standardUserDefaults] setObject:newArray forKey:@"EventsKey"];
+        
+    }
+    
+}
+
++ (NSMutableArray *)savedEvents {
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"EventsKey"]) {
+        
+        return (NSMutableArray *)[[NSUserDefaults standardUserDefaults] objectForKey:@"EventsKey"];
+        
+    }
+    
+    return nil;
+    
+}
+
++ (void)clearAllSavedEvents {
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"EventsKey"];
     
 }
 
@@ -101,6 +140,53 @@
     
 }
 
+#pragma mark - NSCoding Protocol Instance Methods
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    
+    self = [super init];
+    if (self) {
+        
+        self.eventName = [aDecoder decodeObjectForKey:@"eventName"];
+        self.eventStartDate = [aDecoder decodeObjectForKey:@"eventStartDate"];
+        self.eventEndDate = [aDecoder decodeObjectForKey:@"eventEndDate"];
+        self.eventType = (CCEventType)[aDecoder decodeIntegerForKey:@"eventType"];
+        self.completed = [aDecoder decodeBoolForKey:@"completed"];
+        if ([aDecoder containsValueForKey:@"eventLocation"]) {
+            
+            self.eventLocation = [aDecoder decodeObjectForKey:@"eventLocation"];
+            
+        }
+        if ([aDecoder containsValueForKey:@"eventPeople"]) {
+            
+            self.eventPeople = [aDecoder decodeObjectForKey:@"eventPeople"];
+            
+        }
+        if ([aDecoder containsValueForKey:@"eventReminder"]) {
+            
+            self.eventReminder = [aDecoder decodeObjectForKey:@"eventReminder"];
+            
+        }
+        
+    }
+    
+    return self;
+    
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    
+    [aCoder encodeObject:self.eventName forKey:@"eventName"];
+    [aCoder encodeObject:self.eventStartDate forKey:@"eventStartDate"];
+    [aCoder encodeObject:self.eventEndDate forKey:@"eventEndDate"];
+    [aCoder encodeObject:self.eventLocation forKey:@"eventLocation"];
+    [aCoder encodeInteger:self.eventType forKey:@"eventType"];
+    [aCoder encodeBool:self.completed forKey:@"completed"];
+    [aCoder encodeObject:self.eventReminder forKey:@"eventReminder"];
+    
+}
+
+
 #pragma mark - Private Instance Methods
 
 - (void)getCurrentLocation {
@@ -123,6 +209,8 @@
         
         self.eventStartDate = startDate;
         self.eventEndDate = endDate;
+        self.eventType = CCEventTypeStandard;
+        self.completed = NO;
         if (uselocation) {
             
             [self getCurrentLocation];

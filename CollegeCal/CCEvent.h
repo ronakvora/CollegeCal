@@ -18,8 +18,9 @@ typedef enum {
     
 } CCEventType;
 
-@interface CCEvent : NSObject <CLLocationManagerDelegate>
+@interface CCEvent : NSObject <CLLocationManagerDelegate, NSCoding>
 
+@property (nonatomic, copy) NSString *eventName;
 @property (nonatomic, strong) NSDate *eventStartDate;
 @property (nonatomic, strong) NSDate *eventEndDate;
 @property (nonatomic, strong) CLLocation *eventLocation;
@@ -28,8 +29,13 @@ typedef enum {
 @property (nonatomic, readonly, getter = isPassed) BOOL passed;
 @property (nonatomic, assign, getter = isCompleted) BOOL completed;
 @property (nonatomic, strong) UILocalNotification *eventReminder;
+@property (nonatomic, assign) NSInteger index;
 
 + (CCEvent *)eventWithStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate useCurrentLocation:(BOOL)uselocation;
+
++ (void)saveEvent:(CCEvent *)event;
++ (NSMutableArray *)savedEvents;
++ (void)clearAllSavedEvents;
 
 - (id)initWithStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate useCurrentLocation:(BOOL)uselocation;
 
