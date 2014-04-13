@@ -16,11 +16,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="sOs-YY-noo" kind="relationship" relationship="viewControllers" id="CBN-8e-qNA"/>
+                        <segue destination="kZC-Aw-vMW" kind="relationship" relationship="viewControllers" id="BaG-Iq-Yb9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEs-yf-7c4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-624" y="-22"/>
+            <point key="canvasLocation" x="-612" y="142"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="GeJ-0a-23W">
@@ -36,7 +37,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xU1-ck-G65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79" y="-650"/>
+            <point key="canvasLocation" x="-79" y="-576"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="DZG-0q-9eK">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="kZC-Aw-vMW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="uq2-ES-MFd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mhw-hM-UfG">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zlY-ud-0gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IeU-dI-v1q">
@@ -51,7 +65,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xIF-Cg-3ea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776" y="-1368"/>
+            <point key="canvasLocation" x="846" y="-1324"/>
         </scene>
         <!--New Event View Controller - New Event-->
         <scene sceneID="8ZY-iH-Mx7">
@@ -79,14 +93,14 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihg-lz-Aoi">
-                                <rect key="frame" x="20" y="128" width="120" height="21"/>
+                                <rect key="frame" x="20" y="128" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKX-bK-r2I">
-                                <rect key="frame" x="20" y="157" width="120" height="21"/>
+                                <rect key="frame" x="20" y="157" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -99,7 +113,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjc-Ou-ciU">
-                                <rect key="frame" x="43" y="157" width="218" height="21"/>
+                                <rect key="frame" x="82" y="157" width="179" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -118,6 +132,41 @@
                                     <segue destination="zAJ-k6-Wk8" kind="push" identifier="EndDateSegue" id="EMF-Jy-P2t"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VAw-rP-qlF">
+                                <rect key="frame" x="20" y="186" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="General"/>
+                                    <segment title="School"/>
+                                    <segment title="Social"/>
+                                </segments>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Q-Pm-Mgo">
+                                <rect key="frame" x="251" y="222" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="userToggleSwitch:" destination="ide-gk-7np" eventType="valueChanged" id="gVY-1x-nWd"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WV5-Qn-ePZ">
+                                <rect key="frame" x="20" y="227" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDN-AO-GLv">
+                                <rect key="frame" x="20" y="273" width="280" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ac7-nK-Oax">
+                                        <rect key="frame" x="119" y="38" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -141,12 +190,14 @@
                     <connections>
                         <outlet property="endDateLabel" destination="Hjc-Ou-ciU" id="eMW-PF-pUm"/>
                         <outlet property="nameTextField" destination="9UH-3A-waz" id="4js-YZ-gMF"/>
+                        <outlet property="reminderSwitch" destination="Q3Q-Pm-Mgo" id="vQC-gB-K97"/>
+                        <outlet property="reminderView" destination="uDN-AO-GLv" id="IvL-JB-ImT"/>
                         <outlet property="startDateLabel" destination="GRr-7X-NFj" id="yNk-Qt-1Gd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8S-Sn-DAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="-1368"/>
+            <point key="canvasLocation" x="1271" y="-1324"/>
         </scene>
         <!--End Date View Controller-->
         <scene sceneID="Pud-oY-Bno">
@@ -207,7 +258,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2Y-uO-ZL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1729" y="-1043"/>
+            <point key="canvasLocation" x="1729" y="-957"/>
         </scene>
         <!--Start Date View Controller-->
         <scene sceneID="skx-oH-exx">
@@ -320,7 +371,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qoF-aD-Q9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373" y="-650"/>
+            <point key="canvasLocation" x="383" y="-576"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

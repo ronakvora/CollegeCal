@@ -18,11 +18,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UILabel *startDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *endDateLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *reminderSwitch;
+@property (weak, nonatomic) IBOutlet UIView *reminderView;
 
 
 - (IBAction)userDone:(id)sender;
 - (IBAction)userCancel:(id)sender;
 - (IBAction)closeKeyboard:(id)sender;
 - (IBAction)updateTitle:(id)sender;
+- (IBAction)userToggleSwitch:(id)sender;
 
 @end

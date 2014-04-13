@@ -121,4 +121,38 @@
     self.title = self.nameTextField.text;
     
 }
+
+- (IBAction)userToggleSwitch:(id)sender {
+    
+    self.reminderView.hidden = NO;
+    
+    if ([self.reminderSwitch isOn]) {
+        
+        [UIView animateWithDuration:0.5
+                         animations:^{
+                             
+                             self.reminderView.alpha = 1.0;
+                             
+                         } completion:nil];
+        
+        
+        
+        
+    } else {
+        
+        [UIView animateWithDuration:0.5
+                         animations:^{
+                             
+                             self.reminderView.alpha = 0.0;
+                             
+                         }
+                         completion:^(BOOL finished) {
+                            
+                             self.reminderView.hidden = YES;
+                             
+                         }];
+        
+    }
+    
+}
 @end
