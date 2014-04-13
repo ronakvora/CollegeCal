@@ -118,9 +118,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JQ-fO-DME">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JQ-fO-DME">
                                 <rect key="frame" x="278" y="128" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="CJC-KO-nYF"/>
+                                    <constraint firstAttribute="width" constant="22" id="VDO-7L-XJZ"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="GLN-XM-yzW" kind="push" identifier="StartDateSegue" id="HbK-Tl-lim"/>
                                 </connections>
@@ -197,6 +201,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8JQ-fO-DME" firstAttribute="top" secondItem="9UH-3A-waz" secondAttribute="bottom" constant="8" id="6yD-8D-I7r"/>
+                            <constraint firstAttribute="trailing" secondItem="8JQ-fO-DME" secondAttribute="trailing" constant="20" id="Ooj-m1-0Bt"/>
                             <constraint firstAttribute="trailing" secondItem="9UH-3A-waz" secondAttribute="trailing" constant="20" id="aXf-BR-i6Z"/>
                             <constraint firstItem="9UH-3A-waz" firstAttribute="leading" secondItem="1Xu-gf-OlE" secondAttribute="leading" constant="20" id="hrn-Tw-15i"/>
                             <constraint firstItem="9UH-3A-waz" firstAttribute="top" secondItem="Tpy-hP-RsD" secondAttribute="bottom" constant="26" id="v3c-28-P5r"/>
@@ -218,6 +224,7 @@
                         <outlet property="endDateLabel" destination="Hjc-Ou-ciU" id="eMW-PF-pUm"/>
                         <outlet property="eventTabLabel" destination="CsH-Wm-cW1" id="r8h-qt-9m2"/>
                         <outlet property="eventTagView" destination="ecq-Uq-0YM" id="pBZ-gQ-z4v"/>
+                        <outlet property="eventTypeSegmenterControl" destination="VAw-rP-qlF" id="d3x-Xo-Dib"/>
                         <outlet property="nameTextField" destination="9UH-3A-waz" id="4js-YZ-gMF"/>
                         <outlet property="reminderSwitch" destination="Q3Q-Pm-Mgo" id="vQC-gB-K97"/>
                         <outlet property="reminderView" destination="uDN-AO-GLv" id="IvL-JB-ImT"/>
@@ -500,10 +507,32 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="zYS-Jw-dHg" kind="push" identifier="segue" id="fLo-5e-xxl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qoF-aD-Q9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="383" y="-576"/>
+        </scene>
+        <!--Event Details View Controller-->
+        <scene sceneID="CpD-Ej-6t2">
+            <objects>
+                <viewController id="zYS-Jw-dHg" customClass="CCEventDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Wb-tc-1MZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="OcH-Uz-ZRq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OxB-b7-7fC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0r3-ua-Yqi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Kq-h4-MKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="-576"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIView *reminderView;
 @property (weak, nonatomic) IBOutlet CCEventTagView *eventTagView;
 @property (weak, nonatomic) IBOutlet UILabel *eventTabLabel;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *eventTypeSegmenterControl;
 
 
 - (IBAction)userDone:(id)sender;

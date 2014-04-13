@@ -28,6 +28,7 @@
 		075ED46618FB352500C961D2 /* CCEndDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46518FB352500C961D2 /* CCEndDateViewController.m */; };
 		075ED46918FB451000C961D2 /* CCEventTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46818FB451000C961D2 /* CCEventTagView.m */; };
 		075ED46D18FB487F00C961D2 /* CCEventColorOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46C18FB487F00C961D2 /* CCEventColorOptionViewController.m */; };
+		075ED47018FB4D3500C961D2 /* CCEventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46F18FB4D3500C961D2 /* CCEventDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		075ED46818FB451000C961D2 /* CCEventTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEventTagView.m; sourceTree = "<group>"; };
 		075ED46B18FB487F00C961D2 /* CCEventColorOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEventColorOptionViewController.h; sourceTree = "<group>"; };
 		075ED46C18FB487F00C961D2 /* CCEventColorOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEventColorOptionViewController.m; sourceTree = "<group>"; };
+		075ED46E18FB4D3500C961D2 /* CCEventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEventDetailsViewController.h; sourceTree = "<group>"; };
+		075ED46F18FB4D3500C961D2 /* CCEventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEventDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +142,6 @@
 				075ED46A18FB451500C961D2 /* Parts */,
 				075ED45A18FB285300C961D2 /* View Controllers */,
 				075ED45118FB166F00C961D2 /* Data Structures */,
-				075ED42E18FB13E800C961D2 /* Main.storyboard */,
 				075ED43418FB13E800C961D2 /* Images.xcassets */,
 				075ED42318FB13E800C961D2 /* Supporting Files */,
 			);
@@ -180,6 +182,7 @@
 			children = (
 				075ED45518FB183800C961D2 /* CCEvent.h */,
 				075ED45618FB183800C961D2 /* CCEvent.m */,
+				075ED42E18FB13E800C961D2 /* Main.storyboard */,
 			);
 			name = "Data Structures";
 			sourceTree = "<group>";
@@ -197,6 +200,8 @@
 				075ED46518FB352500C961D2 /* CCEndDateViewController.m */,
 				075ED46B18FB487F00C961D2 /* CCEventColorOptionViewController.h */,
 				075ED46C18FB487F00C961D2 /* CCEventColorOptionViewController.m */,
+				075ED46E18FB4D3500C961D2 /* CCEventDetailsViewController.h */,
+				075ED46F18FB4D3500C961D2 /* CCEventDetailsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				075ED45D18FB286B00C961D2 /* CCEventsTableViewController.m in Sources */,
 				075ED42918FB13E800C961D2 /* main.m in Sources */,
 				075ED46618FB352500C961D2 /* CCEndDateViewController.m in Sources */,
+				075ED47018FB4D3500C961D2 /* CCEventDetailsViewController.m in Sources */,
 				075ED46318FB351D00C961D2 /* CCStartDateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

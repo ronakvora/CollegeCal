@@ -21,6 +21,8 @@
 @synthesize endDateLabel = _endDateLabel;
 @synthesize reminderSwitch = _reminderSwitch;
 @synthesize reminderView = _reminderView;
+@synthesize eventTypeSegmenterControl = _eventTypeSegmenterControl;
+@synthesize eventTabLabel = _eventTab;
 
 - (void)viewDidLoad
 {
@@ -41,11 +43,22 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     
+    if ([self.event.eventEndDate timeIntervalSinceDate:self.event.eventStartDate] < 0) {
+        
+        NSCalendar *calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        
+        NSDateComponents *dateComponents = [calender components:(NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute) fromDate:self.event.eventStartDate];
+        
+        dateComponents.minute += 30;
+        
+        NSDate *defualtEnd = [calender dateFromComponents:dateComponents];
+        self.event.eventEndDate = defualtEnd;
+        
+    }
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
-    
-    NSLog(@"%@", [dateFormatter stringFromDate:self.event.eventStartDate]);
     
     [UIView transitionWithView:self.startDateLabel
                       duration:0.5
@@ -91,7 +104,6 @@
             self.eventTabLabel.text = @"Purple";
             break;
     }
-    
     
 }
 

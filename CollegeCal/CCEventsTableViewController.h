@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "CCEvent.h"
+#import "CCEventDetailsViewController.h"
 
 @interface CCEventsTableViewController : UITableViewController
 
