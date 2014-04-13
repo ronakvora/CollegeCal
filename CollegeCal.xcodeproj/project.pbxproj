@@ -14,13 +14,14 @@
 		075ED42918FB13E800C961D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED42818FB13E800C961D2 /* main.m */; };
 		075ED42D18FB13E800C961D2 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED42C18FB13E800C961D2 /* CCAppDelegate.m */; };
 		075ED43018FB13E800C961D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075ED42E18FB13E800C961D2 /* Main.storyboard */; };
-		075ED43318FB13E800C961D2 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED43218FB13E800C961D2 /* CCViewController.m */; };
 		075ED43518FB13E800C961D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075ED43418FB13E800C961D2 /* Images.xcassets */; };
 		075ED43C18FB13E800C961D2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075ED43B18FB13E800C961D2 /* XCTest.framework */; };
 		075ED43D18FB13E800C961D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075ED41C18FB13E800C961D2 /* Foundation.framework */; };
 		075ED43E18FB13E800C961D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075ED42018FB13E800C961D2 /* UIKit.framework */; };
 		075ED44618FB13E800C961D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 075ED44418FB13E800C961D2 /* InfoPlist.strings */; };
 		075ED44818FB13E800C961D2 /* CollegeCalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED44718FB13E800C961D2 /* CollegeCalTests.m */; };
+		075ED45718FB183800C961D2 /* CCEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED45618FB183800C961D2 /* CCEvent.m */; };
+		075ED45918FB198000C961D2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075ED45818FB198000C961D2 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,15 @@
 		075ED42B18FB13E800C961D2 /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
 		075ED42C18FB13E800C961D2 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
 		075ED42F18FB13E800C961D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		075ED43118FB13E800C961D2 /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
-		075ED43218FB13E800C961D2 /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
 		075ED43418FB13E800C961D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		075ED43A18FB13E800C961D2 /* CollegeCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		075ED43B18FB13E800C961D2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		075ED44318FB13E800C961D2 /* CollegeCalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollegeCalTests-Info.plist"; sourceTree = "<group>"; };
 		075ED44518FB13E800C961D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		075ED44718FB13E800C961D2 /* CollegeCalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollegeCalTests.m; sourceTree = "<group>"; };
+		075ED45518FB183800C961D2 /* CCEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEvent.h; sourceTree = "<group>"; };
+		075ED45618FB183800C961D2 /* CCEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEvent.m; sourceTree = "<group>"; };
+		075ED45818FB198000C961D2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			files = (
 				075ED41F18FB13E800C961D2 /* CoreGraphics.framework in Frameworks */,
 				075ED42118FB13E800C961D2 /* UIKit.framework in Frameworks */,
+				075ED45918FB198000C961D2 /* MapKit.framework in Frameworks */,
 				075ED41D18FB13E800C961D2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		075ED41B18FB13E800C961D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				075ED45818FB198000C961D2 /* MapKit.framework */,
 				075ED41C18FB13E800C961D2 /* Foundation.framework */,
 				075ED41E18FB13E800C961D2 /* CoreGraphics.framework */,
 				075ED42018FB13E800C961D2 /* UIKit.framework */,
@@ -112,11 +116,10 @@
 		075ED42218FB13E800C961D2 /* CollegeCal */ = {
 			isa = PBXGroup;
 			children = (
+				075ED45118FB166F00C961D2 /* Data Structures */,
 				075ED42B18FB13E800C961D2 /* CCAppDelegate.h */,
 				075ED42C18FB13E800C961D2 /* CCAppDelegate.m */,
 				075ED42E18FB13E800C961D2 /* Main.storyboard */,
-				075ED43118FB13E800C961D2 /* CCViewController.h */,
-				075ED43218FB13E800C961D2 /* CCViewController.m */,
 				075ED43418FB13E800C961D2 /* Images.xcassets */,
 				075ED42318FB13E800C961D2 /* Supporting Files */,
 			);
@@ -150,6 +153,15 @@
 				075ED44418FB13E800C961D2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		075ED45118FB166F00C961D2 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				075ED45518FB183800C961D2 /* CCEvent.h */,
+				075ED45618FB183800C961D2 /* CCEvent.m */,
+			);
+			name = "Data Structures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +212,16 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Ronak;
 				TargetAttributes = {
+					075ED41818FB13E800C961D2 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					075ED43918FB13E800C961D2 = {
 						TestTargetID = 075ED41818FB13E800C961D2;
 					};
@@ -250,9 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075ED45718FB183800C961D2 /* CCEvent.m in Sources */,
 				075ED42D18FB13E800C961D2 /* CCAppDelegate.m in Sources */,
 				075ED42918FB13E800C961D2 /* main.m in Sources */,
-				075ED43318FB13E800C961D2 /* CCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
