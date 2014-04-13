@@ -16,6 +16,11 @@
 
 @synthesize event = _event;
 @synthesize nameTextField = _nameTextField;
+@synthesize eventTagView = _eventTagView;
+@synthesize startDateLabel = _startDateLabel;
+@synthesize endDateLabel = _endDateLabel;
+@synthesize reminderSwitch = _reminderSwitch;
+@synthesize reminderView = _reminderView;
 
 - (void)viewDidLoad
 {
@@ -62,6 +67,31 @@
                     }
                     completion:nil];
     
+    self.eventTagView.colorOption = self.event.colorOption;
+    
+    switch (self.eventTagView.colorOption) {
+        case CCTagColorOptionRed:
+            
+            self.eventTabLabel.text = @"Red";
+            break;
+            
+        case CCTagColorOptionBlue:
+            self.eventTabLabel.text = @"Blue";
+            break;
+            
+        case CCTagColorOptionGreen:
+            self.eventTabLabel.text = @"Green";
+            break;
+            
+        case CCTagColorOptionOrange:
+            self.eventTabLabel.text = @"Orange";
+            break;
+            
+        default:
+            self.eventTabLabel.text = @"Purple";
+            break;
+    }
+    
     
 }
 
@@ -82,6 +112,11 @@
     } else if ([[segue identifier] isEqualToString:@"EndDateSegue"]) {
         
         CCEndDateViewController *viewController = (CCEndDateViewController *)[segue destinationViewController];
+        viewController.event = self.event;
+        
+    } else if ([[segue identifier] isEqualToString:@"ColorSegue"]) {
+        
+        CCEventColorOptionViewController *viewController = (CCEventColorOptionViewController *)[segue destinationViewController];
         viewController.event = self.event;
         
     }

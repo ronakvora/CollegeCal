@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "CCEventTagView.h"
 
 typedef enum {
     
@@ -30,6 +31,7 @@ typedef enum {
 @property (nonatomic, assign, getter = isCompleted) BOOL completed;
 @property (nonatomic, strong) UILocalNotification *eventReminder;
 @property (nonatomic, assign) NSInteger index;
+@property (nonatomic, assign) CCTagColorOption colorOption;
 
 + (CCEvent *)eventWithStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate useCurrentLocation:(BOOL)uselocation;
 

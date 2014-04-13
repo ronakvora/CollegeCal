@@ -11,6 +11,8 @@
 #import "CCEvent.h"
 #import "CCStartDateViewController.h"
 #import "CCEndDateViewController.h"
+#import "CCEventColorOptionViewController.h"
+#import "CCEventTagView.h"
 
 @interface CCNewEventViewController : UIViewController
 
@@ -20,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *endDateLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *reminderSwitch;
 @property (weak, nonatomic) IBOutlet UIView *reminderView;
+@property (weak, nonatomic) IBOutlet CCEventTagView *eventTagView;
+@property (weak, nonatomic) IBOutlet UILabel *eventTabLabel;
 
 
 - (IBAction)userDone:(id)sender;

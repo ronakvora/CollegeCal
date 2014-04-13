@@ -151,6 +151,7 @@
         self.eventStartDate = [aDecoder decodeObjectForKey:@"eventStartDate"];
         self.eventEndDate = [aDecoder decodeObjectForKey:@"eventEndDate"];
         self.eventType = (CCEventType)[aDecoder decodeIntegerForKey:@"eventType"];
+        self.colorOption = (CCTagColorOption)[aDecoder decodeObjectForKey:@"colorOption"];
         self.completed = [aDecoder decodeBoolForKey:@"completed"];
         if ([aDecoder containsValueForKey:@"eventLocation"]) {
             
@@ -183,6 +184,7 @@
     [aCoder encodeInteger:self.eventType forKey:@"eventType"];
     [aCoder encodeBool:self.completed forKey:@"completed"];
     [aCoder encodeObject:self.eventReminder forKey:@"eventReminder"];
+    [aCoder encodeInteger:self.colorOption forKey:@"colorOption"];
     
 }
 
@@ -210,6 +212,7 @@
         self.eventStartDate = startDate;
         self.eventEndDate = endDate;
         self.eventType = CCEventTypeStandard;
+        self.colorOption = CCTagColorOptionRed;
         self.completed = NO;
         if (uselocation) {
             

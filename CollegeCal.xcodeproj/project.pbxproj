@@ -26,6 +26,8 @@
 		075ED46018FB2B9600C961D2 /* CCNewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED45F18FB2B9600C961D2 /* CCNewEventViewController.m */; };
 		075ED46318FB351D00C961D2 /* CCStartDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46218FB351D00C961D2 /* CCStartDateViewController.m */; };
 		075ED46618FB352500C961D2 /* CCEndDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46518FB352500C961D2 /* CCEndDateViewController.m */; };
+		075ED46918FB451000C961D2 /* CCEventTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46818FB451000C961D2 /* CCEventTagView.m */; };
+		075ED46D18FB487F00C961D2 /* CCEventColorOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075ED46C18FB487F00C961D2 /* CCEventColorOptionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		075ED46218FB351D00C961D2 /* CCStartDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCStartDateViewController.m; sourceTree = "<group>"; };
 		075ED46418FB352500C961D2 /* CCEndDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEndDateViewController.h; sourceTree = "<group>"; };
 		075ED46518FB352500C961D2 /* CCEndDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEndDateViewController.m; sourceTree = "<group>"; };
+		075ED46718FB451000C961D2 /* CCEventTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEventTagView.h; sourceTree = "<group>"; };
+		075ED46818FB451000C961D2 /* CCEventTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEventTagView.m; sourceTree = "<group>"; };
+		075ED46B18FB487F00C961D2 /* CCEventColorOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEventColorOptionViewController.h; sourceTree = "<group>"; };
+		075ED46C18FB487F00C961D2 /* CCEventColorOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEventColorOptionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 			children = (
 				075ED42B18FB13E800C961D2 /* CCAppDelegate.h */,
 				075ED42C18FB13E800C961D2 /* CCAppDelegate.m */,
+				075ED46A18FB451500C961D2 /* Parts */,
 				075ED45A18FB285300C961D2 /* View Controllers */,
 				075ED45118FB166F00C961D2 /* Data Structures */,
 				075ED42E18FB13E800C961D2 /* Main.storyboard */,
@@ -188,8 +195,19 @@
 				075ED46218FB351D00C961D2 /* CCStartDateViewController.m */,
 				075ED46418FB352500C961D2 /* CCEndDateViewController.h */,
 				075ED46518FB352500C961D2 /* CCEndDateViewController.m */,
+				075ED46B18FB487F00C961D2 /* CCEventColorOptionViewController.h */,
+				075ED46C18FB487F00C961D2 /* CCEventColorOptionViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		075ED46A18FB451500C961D2 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				075ED46718FB451000C961D2 /* CCEventTagView.h */,
+				075ED46818FB451000C961D2 /* CCEventTagView.m */,
+			);
+			name = Parts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +320,9 @@
 			files = (
 				075ED45718FB183800C961D2 /* CCEvent.m in Sources */,
 				075ED42D18FB13E800C961D2 /* CCAppDelegate.m in Sources */,
+				075ED46918FB451000C961D2 /* CCEventTagView.m in Sources */,
 				075ED46018FB2B9600C961D2 /* CCNewEventViewController.m in Sources */,
+				075ED46D18FB487F00C961D2 /* CCEventColorOptionViewController.m in Sources */,
 				075ED45D18FB286B00C961D2 /* CCEventsTableViewController.m in Sources */,
 				075ED42918FB13E800C961D2 /* main.m in Sources */,
 				075ED46618FB352500C961D2 /* CCEndDateViewController.m in Sources */,
