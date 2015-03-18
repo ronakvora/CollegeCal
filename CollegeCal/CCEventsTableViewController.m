@@ -2,7 +2,7 @@
 //  CCEventsTableViewController.m
 //  CollegeCal
 //
-//  Created by Varun Santhanam on 4/13/14.
+//  Created by Ronak Vora on 4/13/14.
 //  Copyright (c) 2014 Ronak. All rights reserved.
 //
 
@@ -31,7 +31,7 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-// self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
 }
@@ -94,6 +94,25 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self performSegueWithIdentifier:@"segue" sender:indexPath];
+    
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return YES;
+    
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        NSMutableArray *savedEvents = [NSMutableArray arrayWithArray:[CCEvent savedEvents]];
+        [savedEvents removeObjectAtIndex:indexPath.row];
+        [[NSUserDefaults standardUserDefaults] setObject:savedEvents forKey:@"EventsKey"];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation: UITableViewRowAnimationAutomatic];
+        
+    }
     
 }
 
